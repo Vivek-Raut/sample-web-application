@@ -53,6 +53,7 @@ pipeline {
     stage("docker build"){
       steps{
         script{
+          sh 'cp -r ../workspace@3/target .'
           sh "docker build -t web-app ."
         }
       }
